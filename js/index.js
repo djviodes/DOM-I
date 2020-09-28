@@ -40,3 +40,42 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const navLinks = document.querySelectorAll("a")
+navLinks[0].textContent = 'Services'
+navLinks[1].textContent = 'Product'
+navLinks[2].textContent = 'Vision'
+navLinks[3].textContent = 'Features'
+navLinks[4].textContent = 'About'
+navLinks[5].textContent = 'Contact'
+
+const cta = document.querySelector('.cta')
+const ctah1 = cta.querySelector('h1')
+ctah1.innerHTML = 'DOM <br>Is <br>Awesome'
+const ctaButton = cta.querySelector('button')
+ctaButton.textContent = 'Get Started'
+const ctaImg = cta.querySelector('img')
+ctaImg.src = 'img/header-img.png'
+
+const h4 = document.querySelectorAll('h4')
+h4[0].textContent = siteContent['main-content']['features-h4']
+h4[1].textContent = siteContent['main-content']['about-h4']
+h4[2].textContent = siteContent['main-content']['services-h4']
+h4[3].textContent = siteContent['main-content']['product-h4']
+h4[4].textContent = siteContent['main-content']['vision-h4']
+h4[5].textContent = siteContent['contact']['contact-h4']
+
+const mainPicture = document.querySelector('.middle-img')
+mainPicture.src = 'img/mid-page-accent.jpg'
+
+const p = document.querySelectorAll('p')
+console.log(p)
+p[0].textContent = siteContent['main-content']['features-content']
+p[1].textContent = siteContent['main-content']['about-content']
+p[2].textContent = siteContent['main-content']['services-content']
+p[3].textContent = siteContent['main-content']['product-content']
+p[4].textContent = siteContent['main-content']['vision-content']
+p[5].textContent = siteContent['contact']['address']
+p[6].textContent = siteContent['contact']['phone']
+p[7].textContent = siteContent['contact']['email']
+p[8].textContent = siteContent['footer']['copyright']
