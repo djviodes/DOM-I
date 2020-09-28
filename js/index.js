@@ -41,6 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const newLink = document.createElement('a')
+newLink.textContent = 'Blog'
+newLink.href = '#'
+const newLink2 = document.createElement('a')
+newLink2.textContent = 'Another Link'
+newLink2.href = '#'
+
+document.querySelector('nav').appendChild(newLink)
+document.querySelector('nav').appendChild(newLink2)
+
 const navLinks = document.querySelectorAll("a")
 navLinks[0].textContent = 'Services'
 navLinks[1].textContent = 'Product'
@@ -49,13 +59,17 @@ navLinks[3].textContent = 'Features'
 navLinks[4].textContent = 'About'
 navLinks[5].textContent = 'Contact'
 
+navLinks.forEach((navLinks) => {
+  navLinks.style.color = 'green'
+})
+
 const cta = document.querySelector('.cta')
 const ctah1 = cta.querySelector('h1')
 ctah1.innerHTML = 'DOM <br>Is <br>Awesome'
 const ctaButton = cta.querySelector('button')
 ctaButton.textContent = 'Get Started'
 const ctaImg = cta.querySelector('img')
-ctaImg.src = 'img/header-img.png'
+ctaImg.src = siteContent['cta']['img-src']
 
 const h4 = document.querySelectorAll('h4')
 h4[0].textContent = siteContent['main-content']['features-h4']
@@ -66,10 +80,9 @@ h4[4].textContent = siteContent['main-content']['vision-h4']
 h4[5].textContent = siteContent['contact']['contact-h4']
 
 const mainPicture = document.querySelector('.middle-img')
-mainPicture.src = 'img/mid-page-accent.jpg'
+mainPicture.src = siteContent['main-content']['middle-img-src']
 
 const p = document.querySelectorAll('p')
-console.log(p)
 p[0].textContent = siteContent['main-content']['features-content']
 p[1].textContent = siteContent['main-content']['about-content']
 p[2].textContent = siteContent['main-content']['services-content']
